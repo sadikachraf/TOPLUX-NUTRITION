@@ -506,28 +506,30 @@
     <div class="packages-grid">
       <div class="pkg" onclick="selectPkg(1)">
         <div class="pkg-img"><img src="./images/product-offer-1.webp" alt="1 balenie Toplux Magnesium Glycinate"></div>
-        <div class="pkg-name">Základný balík</div>
-        <div class="pkg-supply">1 balenie · 90-dňová zásoba</div>
+        <div class="pkg-name">Skúšobný balík</div>
+        <div class="pkg-supply">1 balenie · dobré na prvé vyskúšanie</div>
         <div class="pkg-price"><sup>€</sup>34<sup style="font-size:18px">.90</sup></div>
-        <div class="pkg-per">€0.39 / deň</div>
+        <div class="pkg-per">Štartovací balík</div>
         <ul class="pkg-perks">
           <li>1× Magnesium Glycinate (90 kapsúl)</li>
           <li>525mg chelátový horčík / dávka</li>
+          <li>Dobrá voľba, ak chcete najprv vyskúšať</li>
           <li>Doručenie po Slovensku</li>
           <li>Platba pri doručení</li>
         </ul>
         <a href="#objednat" class="btn-pkg" onclick="selectPkg(1)">Objednať</a>
       </div>
       <div class="pkg featured" onclick="selectPkg(2)">
-        <div class="pkg-badge">★ Najobľúbenejšia voľba</div>
+        <div class="pkg-badge">★ Najrozumnejšia voľba</div>
         <div class="pkg-img"><img src="./images/product-offer-2.webp" alt="2 balenia Toplux Magnesium Glycinate"></div>
         <div class="pkg-name">Odporúčaný balík</div>
-        <div class="pkg-supply">2 balenia · 180-dňová zásoba</div>
+        <div class="pkg-supply">2 balenia · najlepšia voľba pre pravidelnú rutinu</div>
         <div class="pkg-price"><sup>€</sup>54<sup style="font-size:18px">.90</sup></div>
-        <div class="pkg-per hl">€0.30 / deň — ušetríte €14.90</div>
+        <div class="pkg-per hl">2. balenie len za €20 · ušetríte €14.90</div>
         <ul class="pkg-perks">
           <li>2× Magnesium Glycinate (180 kapsúl)</li>
           <li>525mg chelátový horčík / dávka</li>
+          <li>Najobľúbenejšia voľba zákazníkov</li>
           <li>Doručenie po Slovensku ZDARMA</li>
           <li>Platba pri doručení</li>
           <li>Prioritné vybavenie objednávky</li>
@@ -535,14 +537,17 @@
         <a href="#objednat" class="btn-pkg" onclick="selectPkg(2)">Objednať teraz →</a>
       </div>
       <div class="pkg" onclick="selectPkg(3)">
+        <div class="pkg-badge">Najvyššia úspora</div>
         <div class="pkg-img"><img src="./images/product-offer-3.webp" alt="3 balenia Toplux Magnesium Glycinate"></div>
-        <div class="pkg-name">Premium balík</div>
-        <div class="pkg-supply">3 balenia · 270-dňová zásoba</div>
+        <div class="pkg-name">Najvýhodnejší balík</div>
+        <div class="pkg-supply">3 balenia · najnižšia cena za balenie</div>
         <div class="pkg-price"><sup>€</sup>69<sup style="font-size:18px">.90</sup></div>
-        <div class="pkg-per">€0.26 / deň — najlepšia hodnota</div>
+        <div class="pkg-per">3. balenie len za €15 · najlepšia hodnota</div>
         <ul class="pkg-perks">
           <li>3× Magnesium Glycinate (270 kapsúl)</li>
           <li>525mg chelátový horčík / dávka</li>
+          <li>Najnižšia cena za balenie: €23.30</li>
+          <li>Výhodné pre domácnosť alebo dlhšiu rutinu</li>
           <li>Doručenie po Slovensku ZDARMA</li>
           <li>Platba pri doručení</li>
           <li>Prioritné vybavenie objednávky</li>
@@ -631,17 +636,17 @@
           <div class="pick-opt" onclick="setPkg(this,1)">
             <div class="pick-name">1 balenie</div>
             <div class="pick-price">€34.90</div>
-            <div class="pick-sub">90-dňová zásoba</div>
+            <div class="pick-sub">Na vyskúšanie</div>
           </div>
           <div class="pick-opt on" onclick="setPkg(this,2)">
             <div class="pick-name">★ 2 balenia</div>
             <div class="pick-price">€54.90</div>
-            <div class="pick-sub">Odporúčané</div>
+            <div class="pick-sub">Najobľúbenejšie</div>
           </div>
           <div class="pick-opt" onclick="setPkg(this,3)">
             <div class="pick-name">3 balenia</div>
             <div class="pick-price">€69.90</div>
-            <div class="pick-sub">270-dňová zásoba</div>
+            <div class="pick-sub">Najlepšia hodnota</div>
           </div>
         </div>
 
@@ -720,7 +725,7 @@
   let currentPkg = 2;
 
   /* ─── REPLACE THIS WITH YOUR DEPLOYED APPS SCRIPT URL ─── */
-  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbw9QY1NXnlkSYdlGfaWY2W-bvvqyHlcUkvU2FcsjuuBDfhI1gNFZrRnkvTGmfeXemEv/exec';
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxc2SMK4BDOORt0GH3S4O-acVK49o6Njhx0O5Anm3grzXhtUq_9SYUZ6cqbIuxslaI/exec';
 
   /* ─── FAQ ─── */
   function toggleFaq(el){ el.parentElement.classList.toggle('open'); }
