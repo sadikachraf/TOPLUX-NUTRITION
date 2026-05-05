@@ -276,6 +276,11 @@
     /* MOBILE STICKY */
     .sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--orange);color:white;padding:16px 24px;text-align:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;z-index:600;box-shadow:0 -4px 24px rgba(0,0,0,.22);cursor:pointer}
 
+
+    .cod-reassure{background:var(--light-teal);border:1px solid rgba(0,179,134,.25);color:var(--navy);border-radius:14px;padding:14px 16px;font-size:14px;font-weight:700;line-height:1.55;margin:4px 0 14px}
+    .form-section{scroll-margin-top:90px}
+    #baliky{scroll-margin-top:90px}
+
     /* RESPONSIVE */
     @media(max-width:940px){
       .hero-wrap{grid-template-columns:1fr;gap:44px;text-align:center;padding:56px 20px}
@@ -326,7 +331,7 @@
       <span>📦 Platba pri prevzatí</span>
       <span>⭐ 4.8/5 hodnotenie</span>
     </div>
-    <a href="#objednat" class="hdr-cta">Objednajte teraz</a>
+    <a href="#objednat" class="hdr-cta">Objednať pri doručení</a>
   </div>
 </header>
 
@@ -335,15 +340,15 @@
   <div class="hero-wrap">
     <div class="hero-text">
       <div class="hero-label">Limitovaná zásoba pre Slovensko</div>
-      <h1>Nie je to vaša vina,<br>že sa cítite <em>unavení.</em></h1>
-      <p class="hero-sub">Moderný život vyčerpáva horčík z vášho tela každý deň. Toplux Nutrition Magnesium Glycinate Complex ho dopĺňa chelátovou formou pre maximálnu vstrebateľnosť.</p>
+      <h1>Tvoj jednoduchý <em>večerný rituál</em><br>s magnéziom</h1>
+      <p class="hero-sub">Toplux Nutrition Magnesium Glycinate Complex s chelátovou formou magnézia — praktický doplnok do každodennej wellness rutiny. Bez platby vopred, platíte až pri doručení.</p>
       <ul class="hero-checks">
-        <li>Prírodná chelátová formula — Magnesium Glycinate 525mg</li>
-        <li>Podporuje normálnu funkciu svalov, nervov a srdca</li>
+        <li>Chelátová forma magnézia — Magnesium Glycinate 525mg</li>
+        <li>Jednoduchá denná minerálna podpora pre mužov aj ženy</li>
         <li>Bez platobnej karty — platíte kuriérovi pri prevzatí</li>
       </ul>
-      <a href="#objednat" class="btn-hero">Chcem vyskúšať →</a>
-      <p class="btn-note">💳 Platba pri doručení &nbsp;·&nbsp; Doručenie 3–5 dní &nbsp;·&nbsp; Záruka vrátenia</p>
+      <a href="#objednat" class="btn-hero">Objednať s platbou pri doručení →</a>
+      <p class="btn-note">💳 Bez platby vopred &nbsp;·&nbsp; Telefonické potvrdenie &nbsp;·&nbsp; Doručenie na Slovensku</p>
     </div>
     <div class="hero-visual">
       <img src="./images/product-bottle.webp" alt="Toplux Nutrition Magnesium Glycinate Complex 525mg">
@@ -353,35 +358,155 @@
 
 <div class="trust-bar">
   <div class="trust-row">
-    <div class="trust-item"><div class="trust-big">10 000+</div><div class="trust-label">spokojných<br>zákazníkov</div></div>
-    <div class="trust-item"><div class="trust-big">525mg</div><div class="trust-label">chelátový horčík<br>/ dávka</div></div>
+    <div class="trust-item"><div class="trust-big">COD</div><div class="trust-label">platba až<br>pri doručení</div></div>
+    <div class="trust-item"><div class="trust-big">525mg</div><div class="trust-label">chelátové magnézium<br>/ dávka</div></div>
     <div class="trust-item"><div class="trust-big">90</div><div class="trust-label">kapsúl<br>v balení</div></div>
-    <div class="trust-item"><div class="trust-big">4.8★</div><div class="trust-label">priemerné<br>hodnotenie</div></div>
+    <div class="trust-item"><div class="trust-big">24h</div><div class="trust-label">telefonické<br>potvrdenie</div></div>
   </div>
 </div>
 
-<!-- PROBLEM -->
-<section class="section" style="background:var(--white)">
+<!-- FAST COD ORDER: moved high for lower friction -->
+<!-- PACKAGES / OFFER -->
+<section class="section" style="background:var(--white)" id="baliky">
   <div class="section-inner">
-    <div class="problem-grid">
-      <div class="problem-photo"><img src="./images/lifestyle-problem.webp" alt="Únava po dlhom pracovnom dni"></div>
-      <div>
-        <div class="tag">Poznáte to?</div>
-        <h2 class="h2">Prečo sa cítite unavení,<br>aj keď ste spali?</h2>
-        <p class="lead">Horčík je minerál, ktorý vaše telo využíva pri viac než 300 životne dôležitých procesoch. Stres, dlhé pracovné hodiny a moderná strava ho vyčerpávajú rýchlejšie, než si myslíte.</p>
-        <ul class="symptom-list">
-          <li><div class="s-icon">😴</div><div>Únava napriek dostatočnému spánku — vstávate bez energie</div></li>
-          <li><div class="s-icon">😤</div><div>Napätie a podráždenosť po dlhom pracovnom dni</div></li>
-          <li><div class="s-icon">💪</div><div>Pocit tuhosti alebo napätia v svaloch ráno alebo večer</div></li>
-          <li><div class="s-icon">🧠</div><div>Ťažkosti so sústredením — hlava pracuje pomaly</div></li>
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="tag">Vyberte si balík</div>
+      <h2 class="h2">Platíte pri doručení — žiadne riziko</h2>
+      <p class="lead" style="margin:12px auto 0;text-align:center">Žiadna platobná karta vopred. Platíte kuriérovi priamo pri prevzatí balíka.</p>
+    </div>
+    <div class="packages-grid">
+      <div class="pkg" onclick="selectPkg(1)">
+        <div class="pkg-img"><img src="./images/product-offer-1.webp" alt="1 balenie Toplux Magnesium Glycinate"></div>
+        <div class="pkg-name">Skúšobný balík</div>
+        <div class="pkg-supply">1 balenie · dobré na prvé vyskúšanie</div>
+        <div class="pkg-price"><sup>€</sup>34<sup style="font-size:18px">.90</sup></div>
+        <div class="pkg-per">Štartovací balík</div>
+        <ul class="pkg-perks">
+          <li>1× Magnesium Glycinate (90 kapsúl)</li>
+          <li>525mg chelátový horčík / dávka</li>
+          <li>Dobrá voľba, ak chcete najprv vyskúšať</li>
+          <li>Doručenie po Slovensku</li>
+          <li>Platba pri doručení</li>
         </ul>
-        <div class="insight-card">
-          <p>„Odhaduje sa, že väčšina dospelých Európanov neprijíma odporúčané denné množstvo horčíka. Väčšina si to ani nevšimne — pretože si myslí, že únava je len normálna súčasť života."</p>
-        </div>
+        <a href="#objednat" class="btn-pkg" onclick="selectPkg(1)">Objednať</a>
+      </div>
+      <div class="pkg featured" onclick="selectPkg(2)">
+        <div class="pkg-badge">★ Najrozumnejšia voľba</div>
+        <div class="pkg-img"><img src="./images/product-offer-2.webp" alt="2 balenia Toplux Magnesium Glycinate"></div>
+        <div class="pkg-name">Odporúčaný balík</div>
+        <div class="pkg-supply">2 balenia · najlepšia voľba pre pravidelnú rutinu</div>
+        <div class="pkg-price"><sup>€</sup>54<sup style="font-size:18px">.90</sup></div>
+        <div class="pkg-per hl">2. balenie len za €20 · ušetríte €14.90</div>
+        <ul class="pkg-perks">
+          <li>2× Magnesium Glycinate (180 kapsúl)</li>
+          <li>525mg chelátový horčík / dávka</li>
+          <li>Najobľúbenejšia voľba zákazníkov</li>
+          <li>Doručenie po Slovensku ZDARMA</li>
+          <li>Platba pri doručení</li>
+          <li>Prioritné vybavenie objednávky</li>
+        </ul>
+        <a href="#objednat" class="btn-pkg" onclick="selectPkg(2)">Objednať teraz →</a>
+      </div>
+      <div class="pkg" onclick="selectPkg(3)">
+        <div class="pkg-badge">Najvyššia úspora</div>
+        <div class="pkg-img"><img src="./images/product-offer-3.webp" alt="3 balenia Toplux Magnesium Glycinate"></div>
+        <div class="pkg-name">Najvýhodnejší balík</div>
+        <div class="pkg-supply">3 balenia · najnižšia cena za balenie</div>
+        <div class="pkg-price"><sup>€</sup>69<sup style="font-size:18px">.90</sup></div>
+        <div class="pkg-per">3. balenie len za €15 · najlepšia hodnota</div>
+        <ul class="pkg-perks">
+          <li>3× Magnesium Glycinate (270 kapsúl)</li>
+          <li>525mg chelátový horčík / dávka</li>
+          <li>Najnižšia cena za balenie: €23.30</li>
+          <li>Výhodné pre domácnosť alebo dlhšiu rutinu</li>
+          <li>Doručenie po Slovensku ZDARMA</li>
+          <li>Platba pri doručení</li>
+          <li>Prioritné vybavenie objednávky</li>
+        </ul>
+        <a href="#objednat" class="btn-pkg" onclick="selectPkg(3)">Objednať</a>
       </div>
     </div>
   </div>
 </section>
+
+
+<!-- ORDER FORM -->
+<section class="form-section" id="objednat">
+  <div class="form-section-inner">
+    <div class="form-top">
+      <div class="tag tag-w">Objednávka</div>
+      <h2 class="h2 h2-w">Objednajte teraz</h2>
+      <p class="lead lead-w" style="margin:0 auto">Vyplňte formulár nižšie. Zavoláme vám do 24 hodín. Platíte kuriérovi pri doručení.</p>
+    </div>
+    <div class="form-box">
+      <div id="form-body">
+        <p class="form-step-label">1. Vyberte si balík:</p>
+        <div class="pkg-picker">
+          <div class="pick-opt" onclick="setPkg(this,1)">
+            <div class="pick-name">1 balenie</div>
+            <div class="pick-price">€34.90</div>
+            <div class="pick-sub">Na vyskúšanie</div>
+          </div>
+          <div class="pick-opt on" onclick="setPkg(this,2)">
+            <div class="pick-name">★ 2 balenia</div>
+            <div class="pick-price">€54.90</div>
+            <div class="pick-sub">Najobľúbenejšie</div>
+          </div>
+          <div class="pick-opt" onclick="setPkg(this,3)">
+            <div class="pick-name">3 balenia</div>
+            <div class="pick-price">€69.90</div>
+            <div class="pick-sub">Najlepšia hodnota</div>
+          </div>
+        </div>
+
+        <hr class="form-divider">
+        <p class="form-step-label">2. Kontaktné údaje:</p>
+        <div class="fg">
+          <label for="f-name">Meno a priezvisko *</label>
+          <input type="text" id="f-name" placeholder="Napr. Jana Nováková" autocomplete="name">
+        </div>
+        <div class="fg">
+          <label for="f-phone">Telefónne číslo *</label>
+          <input type="tel" id="f-phone" placeholder="+421 9XX XXX XXX" autocomplete="tel">
+        </div>
+        <hr class="form-divider">
+        <p class="form-step-label">3. Adresa doručenia:</p>
+        <div class="fg">
+          <label for="f-street">Ulica a číslo domu *</label>
+          <input type="text" id="f-street" placeholder="Napr. Hlavná 15" autocomplete="street-address">
+        </div>
+        <div class="form-row-2">
+          <div class="fg">
+            <label for="f-city">Mesto *</label>
+            <input type="text" id="f-city" placeholder="Bratislava" autocomplete="address-level2">
+          </div>
+          <div class="fg">
+            <label for="f-zip">PSČ *</label>
+            <input type="text" id="f-zip" placeholder="81101" autocomplete="postal-code">
+          </div>
+        </div>
+        <div class="fg">
+          <label for="f-note">Poznámka <span style="font-weight:400;color:var(--muted)">(voliteľné)</span></label>
+          <textarea id="f-note" placeholder="Napr. zavolajte pred doručením, iné patro atď."></textarea>
+        </div>
+
+        <div class="cod-reassure">📞 Po odoslaní vás kontaktujeme telefonicky pre potvrdenie objednávky. Platíte až kuriérovi pri doručení.</div>
+        <button class="btn-submit" id="submit-btn" onclick="submitOrder()">
+          Objednať — platím pri doručení →
+        </button>
+        <p class="form-foot">🔒 Vaše osobné údaje používame výhradne na vybavenie objednávky.<br>Zasielame len na adresy na území Slovenska.</p>
+      </div>
+
+      <div class="success-wrap" id="success-box">
+        <div class="success-circle">✅</div>
+        <h3>Ďakujeme za objednávku!</h3>
+        <p>Zavoláme vám do 24 hodín pre potvrdenie.<br>Prosím, majte telefón pri sebe.<br><br>Balík doručíme do 3–5 pracovných dní.</p>
+        <div class="order-ref" id="order-ref">Referenčné číslo: —</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- PRODUCT INTRO -->
 <section class="section" style="background:var(--off-white)">
@@ -391,13 +516,13 @@
       <div>
         <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);margin-bottom:10px">Toplux Nutrition®</div>
         <h2 class="h2" style="font-size:clamp(26px,3vw,38px);">Magnesium Glycinate Complex<br>— Prírodná chelátová formula.</h2>
-        <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:28px">Väčšina lacných horčíkových produktov sa vstrebáva zle a dráždi žalúdok. Toplux Nutrition Magnesium Glycinate Complex používa chelátovú formu — horčík viazaný na aminokyselinu glycín — pre maximálnu vstrebateľnosť a šetrnosť na tráviacu sústavu.</p>
+        <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:28px">Toplux Nutrition Magnesium Glycinate Complex používa chelátovú formu — horčík viazaný na aminokyselinu glycín. Je navrhnutý ako jednoduchý doplnok do dennej rutiny pre každodennú minerálnu podporu.</p>
         <div class="stats-row">
           <div class="stat"><div class="stat-n">525</div><div class="stat-l">mg / dávka</div></div>
           <div class="stat"><div class="stat-n">90</div><div class="stat-l">kapsúl / balenie</div></div>
           <div class="stat"><div class="stat-n">90</div><div class="stat-l">dní zásoby</div></div>
         </div>
-        <a href="#objednat" class="btn-hero" style="font-size:16px;padding:17px 30px;max-width:320px">Objednajte teraz →</a>
+        <a href="#objednat" class="btn-hero" style="font-size:16px;padding:17px 30px;max-width:320px">Objednať pri doručení →</a>
       </div>
     </div>
   </div>
@@ -505,69 +630,6 @@
   </div>
 </section>
 
-<!-- PACKAGES / OFFER -->
-<section class="section" style="background:var(--white)" id="baliky">
-  <div class="section-inner">
-    <div style="text-align:center;margin-bottom:52px">
-      <div class="tag">Vyberte si balík</div>
-      <h2 class="h2">Platíte pri doručení — žiadne riziko</h2>
-      <p class="lead" style="margin:12px auto 0;text-align:center">Žiadna platobná karta vopred. Platíte kuriérovi priamo pri prevzatí balíka.</p>
-    </div>
-    <div class="packages-grid">
-      <div class="pkg" onclick="selectPkg(1)">
-        <div class="pkg-img"><img src="./images/product-offer-1.webp" alt="1 balenie Toplux Magnesium Glycinate"></div>
-        <div class="pkg-name">Skúšobný balík</div>
-        <div class="pkg-supply">1 balenie · dobré na prvé vyskúšanie</div>
-        <div class="pkg-price"><sup>€</sup>34<sup style="font-size:18px">.90</sup></div>
-        <div class="pkg-per">Štartovací balík</div>
-        <ul class="pkg-perks">
-          <li>1× Magnesium Glycinate (90 kapsúl)</li>
-          <li>525mg chelátový horčík / dávka</li>
-          <li>Dobrá voľba, ak chcete najprv vyskúšať</li>
-          <li>Doručenie po Slovensku</li>
-          <li>Platba pri doručení</li>
-        </ul>
-        <a href="#objednat" class="btn-pkg" onclick="selectPkg(1)">Objednať</a>
-      </div>
-      <div class="pkg featured" onclick="selectPkg(2)">
-        <div class="pkg-badge">★ Najrozumnejšia voľba</div>
-        <div class="pkg-img"><img src="./images/product-offer-2.webp" alt="2 balenia Toplux Magnesium Glycinate"></div>
-        <div class="pkg-name">Odporúčaný balík</div>
-        <div class="pkg-supply">2 balenia · najlepšia voľba pre pravidelnú rutinu</div>
-        <div class="pkg-price"><sup>€</sup>54<sup style="font-size:18px">.90</sup></div>
-        <div class="pkg-per hl">2. balenie len za €20 · ušetríte €14.90</div>
-        <ul class="pkg-perks">
-          <li>2× Magnesium Glycinate (180 kapsúl)</li>
-          <li>525mg chelátový horčík / dávka</li>
-          <li>Najobľúbenejšia voľba zákazníkov</li>
-          <li>Doručenie po Slovensku ZDARMA</li>
-          <li>Platba pri doručení</li>
-          <li>Prioritné vybavenie objednávky</li>
-        </ul>
-        <a href="#objednat" class="btn-pkg" onclick="selectPkg(2)">Objednať teraz →</a>
-      </div>
-      <div class="pkg" onclick="selectPkg(3)">
-        <div class="pkg-badge">Najvyššia úspora</div>
-        <div class="pkg-img"><img src="./images/product-offer-3.webp" alt="3 balenia Toplux Magnesium Glycinate"></div>
-        <div class="pkg-name">Najvýhodnejší balík</div>
-        <div class="pkg-supply">3 balenia · najnižšia cena za balenie</div>
-        <div class="pkg-price"><sup>€</sup>69<sup style="font-size:18px">.90</sup></div>
-        <div class="pkg-per">3. balenie len za €15 · najlepšia hodnota</div>
-        <ul class="pkg-perks">
-          <li>3× Magnesium Glycinate (270 kapsúl)</li>
-          <li>525mg chelátový horčík / dávka</li>
-          <li>Najnižšia cena za balenie: €23.30</li>
-          <li>Výhodné pre domácnosť alebo dlhšiu rutinu</li>
-          <li>Doručenie po Slovensku ZDARMA</li>
-          <li>Platba pri doručení</li>
-          <li>Prioritné vybavenie objednávky</li>
-        </ul>
-        <a href="#objednat" class="btn-pkg" onclick="selectPkg(3)">Objednať</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PROCESS -->
 <section class="section" style="background:var(--off-white)">
   <div class="section-inner">
@@ -590,8 +652,8 @@
     <div class="guarantee-card">
       <div class="guarantee-img"><img src="./images/guarantee.webp" alt="100% záruka spokojnosti Toplux Nutrition"></div>
       <div>
-        <h2 class="g-title">100% záruka spokojnosti</h2>
-        <p class="g-text">Pocítite rozdiel — alebo vrátime peniaze. Žiadne otázky, žiadne komplikácie. Veríme v náš produkt natoľko, že nesete nulové riziko. Ak nie ste spokojní z akéhokoľvek dôvodu, kontaktujte nás a vyriešime to okamžite.</p>
+        <h2 class="g-title">Bezpečná objednávka bez platby vopred</h2>
+        <p class="g-text">Objednávate bez platby vopred a zaplatíte až pri doručení. Ak s objednávkou niečo nebude v poriadku, kontaktujte nás a pomôžeme vám ju vyriešiť jednoducho a férovo.</p>
       </div>
     </div>
   </div>
@@ -631,87 +693,6 @@
   </div>
 </section>
 
-<!-- ORDER FORM -->
-<section class="form-section" id="objednat">
-  <div class="form-section-inner">
-    <div class="form-top">
-      <div class="tag tag-w">Objednávka</div>
-      <h2 class="h2 h2-w">Objednajte teraz</h2>
-      <p class="lead lead-w" style="margin:0 auto">Vyplňte formulár nižšie. Zavoláme vám do 24 hodín. Platíte kuriérovi pri doručení.</p>
-    </div>
-    <div class="form-box">
-      <div id="form-body">
-        <p class="form-step-label">1. Vyberte si balík:</p>
-        <div class="pkg-picker">
-          <div class="pick-opt" onclick="setPkg(this,1)">
-            <div class="pick-name">1 balenie</div>
-            <div class="pick-price">€34.90</div>
-            <div class="pick-sub">Na vyskúšanie</div>
-          </div>
-          <div class="pick-opt on" onclick="setPkg(this,2)">
-            <div class="pick-name">★ 2 balenia</div>
-            <div class="pick-price">€54.90</div>
-            <div class="pick-sub">Najobľúbenejšie</div>
-          </div>
-          <div class="pick-opt" onclick="setPkg(this,3)">
-            <div class="pick-name">3 balenia</div>
-            <div class="pick-price">€69.90</div>
-            <div class="pick-sub">Najlepšia hodnota</div>
-          </div>
-        </div>
-
-        <hr class="form-divider">
-        <p class="form-step-label">2. Kontaktné údaje:</p>
-        <div class="fg">
-          <label for="f-name">Meno a priezvisko *</label>
-          <input type="text" id="f-name" placeholder="Napr. Jana Nováková" autocomplete="name">
-        </div>
-        <div class="fg">
-          <label for="f-phone">Telefónne číslo *</label>
-          <input type="tel" id="f-phone" placeholder="+421 9XX XXX XXX" autocomplete="tel">
-        </div>
-        <div class="fg">
-          <label for="f-email">E-mail <span style="font-weight:400;color:var(--muted)">(voliteľné)</span></label>
-          <input type="email" id="f-email" placeholder="vas@email.sk" autocomplete="email">
-        </div>
-
-        <hr class="form-divider">
-        <p class="form-step-label">3. Adresa doručenia:</p>
-        <div class="fg">
-          <label for="f-street">Ulica a číslo domu *</label>
-          <input type="text" id="f-street" placeholder="Napr. Hlavná 15" autocomplete="street-address">
-        </div>
-        <div class="form-row-2">
-          <div class="fg">
-            <label for="f-city">Mesto *</label>
-            <input type="text" id="f-city" placeholder="Bratislava" autocomplete="address-level2">
-          </div>
-          <div class="fg">
-            <label for="f-zip">PSČ *</label>
-            <input type="text" id="f-zip" placeholder="81101" autocomplete="postal-code">
-          </div>
-        </div>
-        <div class="fg">
-          <label for="f-note">Poznámka <span style="font-weight:400;color:var(--muted)">(voliteľné)</span></label>
-          <textarea id="f-note" placeholder="Napr. zavolajte pred doručením, iné patro atď."></textarea>
-        </div>
-
-        <button class="btn-submit" id="submit-btn" onclick="submitOrder()">
-          Objednať — platím pri doručení →
-        </button>
-        <p class="form-foot">🔒 Vaše osobné údaje používame výhradne na vybavenie objednávky.<br>Zasielame len na adresy na území Slovenska.</p>
-      </div>
-
-      <div class="success-wrap" id="success-box">
-        <div class="success-circle">✅</div>
-        <h3>Ďakujeme za objednávku!</h3>
-        <p>Zavoláme vám do 24 hodín pre potvrdenie.<br>Prosím, majte telefón pri sebe.<br><br>Balík doručíme do 3–5 pracovných dní.</p>
-        <div class="order-ref" id="order-ref">Referenčné číslo: —</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="foot-logo">TOPLUX NUTRITION</div>
   <p class="foot-disclaimer">Toplux Nutrition Magnesium Glycinate Complex je doplnok stravy. Nie je liekom a nie je určený na diagnostiku, liečbu ani prevenciu žiadneho ochorenia. Doplnky stravy by nemali nahrádzať pestrú a vyváženú stravu ani zdravý životný štýl. Skladujte mimo dosahu detí. Pred použitím si prečítajte etiketu.</p>
@@ -723,7 +704,7 @@
   <p class="foot-copy">© 2025 Toplux Nutrition. Všetky práva vyhradené.</p>
 </footer>
 
-<div class="sticky-mobile" onclick="location.href='#objednat'">Objednajte teraz — platíte pri doručení →</div>
+<div class="sticky-mobile" onclick="location.href='#objednat'">2 balenia 54,90 € • Platba pri doručení →</div>
 
 <script>
   /* ─── Package definitions (matches Google Sheet columns exactly) ─── */
@@ -733,6 +714,7 @@
     3: { sku:'PMLD-1740', price:69.90, quantity:3 }
   };
   let currentPkg = 2;
+  let checkoutStarted = false;
 
   /* ─── REPLACE THIS WITH YOUR DEPLOYED APPS SCRIPT URL ─── */
   const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxc2SMK4BDOORt0GH3S4O-acVK49o6Njhx0O5Anm3grzXhtUq_9SYUZ6cqbIuxslaI/exec';
@@ -744,6 +726,7 @@
   function selectPkg(n){
     currentPkg = n;
     syncPicker();
+    fireInitiateCheckout();
     document.getElementById('objednat').scrollIntoView({behavior:'smooth'});
   }
 
@@ -751,6 +734,7 @@
   function setPkg(el, n){
     currentPkg = n;
     syncPicker();
+    fireInitiateCheckout();
   }
 
   function syncPicker(){
@@ -763,9 +747,11 @@
      Just paste your pixel base code in the <head> comments.
   ───────────────────────────────────────────────── */
   function fireInitiateCheckout(){
+    if(checkoutStarted) return;
+    checkoutStarted = true;
     const p = PKGS[currentPkg];
     if(typeof fbq!=='undefined') fbq('track','InitiateCheckout',{value:p.price,currency:'EUR',content_ids:[p.sku],num_items:p.quantity});
-    if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{value:p.price,currency:'EUR',content_id:p.sku});
+    if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{value:p.price,currency:'EUR',content_id:p.sku,quantity:p.quantity});
   }
 
   function firePurchase(p){
@@ -830,7 +816,7 @@
       city:             document.getElementById('f-city').value.trim(),
       zip_code:         document.getElementById('f-zip').value.trim(),
       customer_address: document.getElementById('f-street').value.trim(),
-      customer_email:   document.getElementById('f-email').value.trim(),
+      customer_email:   (document.getElementById('f-email') ? document.getElementById('f-email').value.trim() : ''),
       quantity:         pkg.quantity,
       note:             document.getElementById('f-note').value.trim(),
       date:             now.toISOString()
