@@ -13,8 +13,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Toplux Nutrition Magnesium Glycinate Complex – prírodná chelátová formula 525mg pre normálnu funkciu svalov a nervovej sústavy. Platíte pri doručení na Slovensku.">
-  <title>Toplux Nutrition – Magnesium Glycinate Complex | Platíte pri Doručení | Slovensko</title>
+  <meta name="description" content="Toplux Nutrition Magnesium Glycinate Complex – prémiový Magnesium Complex s chelátovou formou magnézia. Nie obyčajný horčík z lekárne. Platíte pri doručení na Slovensku.">
+  <title>Toplux Nutrition – Prémiový Magnesium Complex | Platba pri doručení | Slovensko</title>
 
   <!-- META PIXEL : 778731385018899 -->
   <script>
@@ -63,6 +63,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    /* MOBILE OVERFLOW FIX */
+    html,body{width:100%;max-width:100%;overflow-x:hidden}
+    body{position:relative}
+    section,header,footer,.announce,.site-header,.hero,.trust-bar,.section,.form-section,.sticky-mobile{max-width:100vw;overflow-x:hidden}
+    img,video,iframe{max-width:100%;height:auto}
+    .hero-wrap,.section-inner,.header-wrap,.form-section-inner,.faq-inner{width:100%;overflow-x:hidden}
+    .packages-grid,.pkg-picker,.benefits-grid,.why-grid,.testi-grid,.product-grid,.form-row-2{max-width:100%;overflow-x:hidden}
+    .btn-hero,.btn-pkg,.btn-submit,.hdr-cta,.sticky-mobile{max-width:100%;box-sizing:border-box}
+
     :root{
       --navy:#0F2B5B;--navy-mid:#1B3A6B;
       --teal:#00B386;--teal-dark:#009470;--light-teal:#E6F7F2;
@@ -187,7 +196,7 @@
     .packages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
     .pkg{border:2px solid var(--border);border-radius:26px;padding:34px 24px 28px;text-align:center;position:relative;transition:all .2s;cursor:pointer;display:flex;flex-direction:column}
     .pkg:hover{border-color:var(--teal);box-shadow:0 10px 36px rgba(0,179,134,.15);transform:translateY(-3px)}
-    .pkg.featured{border:3px solid var(--teal);box-shadow:0 16px 52px rgba(0,179,134,.22);transform:scale(1.04);background:#F0FBF7}
+    .pkg.featured{border:3px solid var(--teal);box-shadow:0 16px 52px rgba(0,179,134,.22);background:#F0FBF7}
     .pkg-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--teal);color:white;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;padding:5px 20px;border-radius:40px;white-space:nowrap}
     .pkg-img{height:190px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
     .pkg-img img{height:100%;object-fit:contain;filter:drop-shadow(0 8px 22px rgba(0,0,0,.13))}
@@ -273,16 +282,39 @@
     .foot-links a:hover{color:rgba(255,255,255,.7)}
     .foot-copy{font-size:12px;color:rgba(255,255,255,.2);margin-top:16px}
 
+
+    /* COMPARISON */
+    .compare-card{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch;margin-top:18px}
+    .compare-col{border-radius:24px;padding:30px 28px;border:2px solid var(--border);position:relative;box-shadow:0 8px 28px rgba(0,0,0,.05)}
+    .compare-basic{background:#F7F8FA;color:var(--text)}
+    .compare-toplux{background:linear-gradient(135deg,#F0FBF7,#EEF3FF);border-color:var(--teal);box-shadow:0 14px 44px rgba(0,179,134,.16)}
+    .compare-head{font-family:'Montserrat',sans-serif;font-weight:900;font-size:20px;color:var(--navy);margin-bottom:18px}
+    .compare-col ul{list-style:none}
+    .compare-col li{font-size:15px;line-height:1.55;padding:11px 0 11px 34px;border-bottom:1px solid rgba(15,43,91,.10);position:relative}
+    .compare-col li:last-child{border-bottom:0}
+    .compare-basic li::before{content:'–';position:absolute;left:8px;top:9px;color:var(--muted);font-weight:900;font-size:20px}
+    .compare-toplux li::before{content:'✓';position:absolute;left:7px;top:9px;color:var(--teal);font-weight:900;font-size:18px}
+    .compare-badge{position:absolute;top:-14px;right:22px;background:var(--orange);color:white;font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;letter-spacing:.04em;text-transform:uppercase;padding:6px 16px;border-radius:40px;box-shadow:0 6px 18px rgba(240,90,40,.3)}
+
     /* MOBILE STICKY */
     .sticky-mobile{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--orange);color:white;padding:16px 24px;text-align:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;z-index:600;box-shadow:0 -4px 24px rgba(0,0,0,.22);cursor:pointer}
 
 
-    .cod-reassure{background:var(--light-teal);border:1px solid rgba(0,179,134,.25);color:var(--navy);border-radius:14px;padding:14px 16px;font-size:14px;font-weight:700;line-height:1.55;margin:4px 0 14px}
-    .form-section{scroll-margin-top:90px}
-    #baliky{scroll-margin-top:90px}
+    @media(min-width:941px){
+      .pkg.featured{transform:scale(1.04)}
+    }
 
     /* RESPONSIVE */
     @media(max-width:940px){
+      html,body{overflow-x:hidden!important}
+      .hero,.section,.form-section,.trust-bar,.site-header,footer{width:100%;max-width:100vw;overflow-x:hidden}
+      .hero-wrap,.section-inner,.header-wrap,.form-section-inner,.faq-inner{width:100%;max-width:100%;padding-left:18px;padding-right:18px}
+      .packages-grid,.pkg-picker,.benefits-grid,.why-grid,.testi-grid,.product-grid,.form-row-2{width:100%;max-width:100%;overflow-x:hidden}
+      .pkg,.pick-opt,.benefit-card,.why-card,.testi-card,.form-box,.guarantee-card{width:100%;max-width:100%;box-sizing:border-box}
+      .pkg.featured{transform:none!important}
+      .btn-hero,.btn-pkg,.btn-submit,.hdr-cta{white-space:normal;word-break:normal}
+      .sticky-mobile{width:100%;left:0;right:0;box-sizing:border-box;white-space:normal}
+
       .hero-wrap{grid-template-columns:1fr;gap:44px;text-align:center;padding:56px 20px}
       .hero-checks li{justify-content:center}
       .btn-hero{margin:0 auto}
@@ -294,6 +326,7 @@
       .product-grid{grid-template-columns:1fr;gap:40px;text-align:center}
       .product-photo img{margin:0 auto;max-width:280px}
       .why-grid{grid-template-columns:1fr}
+      .compare-card{grid-template-columns:1fr}
       .chelate-banner{flex-direction:column;text-align:center}
       .benefits-grid{grid-template-columns:1fr}
       .testi-grid{grid-template-columns:1fr}
@@ -320,7 +353,7 @@
   <span class="dot">·</span>
   <span>🚚 Doručenie po celom Slovensku</span>
   <span class="dot">·</span>
-  <span>🔒 100% záruka spokojnosti</span>
+  <span>🔒 Bez platby vopred</span>
 </div>
 
 <header class="site-header">
@@ -329,9 +362,9 @@
     <div class="header-trust">
       <span>🛡️ Bezpečná objednávka</span>
       <span>📦 Platba pri prevzatí</span>
-      <span>⭐ 4.8/5 hodnotenie</span>
+      <span>⚡ Rýchla objednávka</span>
     </div>
-    <a href="#objednat" class="hdr-cta">Objednať pri doručení</a>
+    <a href="#objednat" class="hdr-cta">Objednajte teraz</a>
   </div>
 </header>
 
@@ -339,15 +372,15 @@
   <div class="hero-overlay"></div>
   <div class="hero-wrap">
     <div class="hero-text">
-      <div class="hero-label">Limitovaná zásoba pre Slovensko</div>
-      <h1>Tvoj jednoduchý <em>večerný rituál</em><br>s magnéziom</h1>
-      <p class="hero-sub">Toplux Nutrition Magnesium Glycinate Complex s chelátovou formou magnézia — praktický doplnok do každodennej wellness rutiny. Bez platby vopred, platíte až pri doručení.</p>
+      <div class="hero-label">Prémiový Magnesium Complex pre Slovensko</div>
+      <h1>Nie každý <em>horčík</em><br>je rovnaký.</h1>
+      <p class="hero-sub">TOPLUX NUTRITION Magnesium Complex kombinuje viac foriem magnézia v jednej formule — pre ľudí, ktorí nechcú obyčajný základný horčík z lekárne.</p>
       <ul class="hero-checks">
-        <li>Chelátová forma magnézia — Magnesium Glycinate 525mg</li>
-        <li>Jednoduchá denná minerálna podpora pre mužov aj ženy</li>
+        <li>Komplexná formula s viacerými formami magnézia</li>
+        <li>Chelátová forma Magnesium Glycinate 525mg v dennej rutine</li>
         <li>Bez platobnej karty — platíte kuriérovi pri prevzatí</li>
       </ul>
-      <a href="#objednat" class="btn-hero">Objednať s platbou pri doručení →</a>
+      <a href="#baliky" class="btn-hero">Chcem TOPLUX Magnesium Complex →</a>
       <p class="btn-note">💳 Bez platby vopred &nbsp;·&nbsp; Telefonické potvrdenie &nbsp;·&nbsp; Doručenie na Slovensku</p>
     </div>
     <div class="hero-visual">
@@ -359,20 +392,19 @@
 <div class="trust-bar">
   <div class="trust-row">
     <div class="trust-item"><div class="trust-big">COD</div><div class="trust-label">platba až<br>pri doručení</div></div>
-    <div class="trust-item"><div class="trust-big">525mg</div><div class="trust-label">chelátové magnézium<br>/ dávka</div></div>
+    <div class="trust-item"><div class="trust-big">525mg</div><div class="trust-label">chelátový horčík<br>/ dávka</div></div>
     <div class="trust-item"><div class="trust-big">90</div><div class="trust-label">kapsúl<br>v balení</div></div>
     <div class="trust-item"><div class="trust-big">24h</div><div class="trust-label">telefonické<br>potvrdenie</div></div>
   </div>
 </div>
 
-<!-- FAST COD ORDER: moved high for lower friction -->
 <!-- PACKAGES / OFFER -->
 <section class="section" style="background:var(--white)" id="baliky">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:52px">
       <div class="tag">Vyberte si balík</div>
-      <h2 class="h2">Platíte pri doručení — žiadne riziko</h2>
-      <p class="lead" style="margin:12px auto 0;text-align:center">Žiadna platobná karta vopred. Platíte kuriérovi priamo pri prevzatí balíka.</p>
+      <h2 class="h2">Ak to s dennou rutinou myslíte vážne, vyberte si správny balík</h2>
+      <p class="lead" style="margin:12px auto 0;text-align:center">Najväčší zmysel dáva pravidelnosť. Žiadna platobná karta vopred — platíte kuriérovi až pri prevzatí balíka.</p>
     </div>
     <div class="packages-grid">
       <div class="pkg" onclick="selectPkg(1)">
@@ -391,12 +423,12 @@
         <a href="#objednat" class="btn-pkg" onclick="selectPkg(1)">Objednať</a>
       </div>
       <div class="pkg featured" onclick="selectPkg(2)">
-        <div class="pkg-badge">★ Najrozumnejšia voľba</div>
+        <div class="pkg-badge">★ Najčastejšia voľba</div>
         <div class="pkg-img"><img src="./images/product-offer-2.webp" alt="2 balenia Toplux Magnesium Glycinate"></div>
         <div class="pkg-name">Odporúčaný balík</div>
-        <div class="pkg-supply">2 balenia · najlepšia voľba pre pravidelnú rutinu</div>
+        <div class="pkg-supply">2 balenia · najlepšia voľba pre väčšinu zákazníkov</div>
         <div class="pkg-price"><sup>€</sup>54<sup style="font-size:18px">.90</sup></div>
-        <div class="pkg-per hl">2. balenie len za €20 · ušetríte €14.90</div>
+        <div class="pkg-per hl">2. balenie len za €20 · pravidelná rutina dáva väčší zmysel</div>
         <ul class="pkg-perks">
           <li>2× Magnesium Glycinate (180 kapsúl)</li>
           <li>525mg chelátový horčík / dávka</li>
@@ -450,7 +482,7 @@
           <div class="pick-opt on" onclick="setPkg(this,2)">
             <div class="pick-name">★ 2 balenia</div>
             <div class="pick-price">€54.90</div>
-            <div class="pick-sub">Najobľúbenejšie</div>
+            <div class="pick-sub">Najčastejšie</div>
           </div>
           <div class="pick-opt" onclick="setPkg(this,3)">
             <div class="pick-name">3 balenia</div>
@@ -469,6 +501,11 @@
           <label for="f-phone">Telefónne číslo *</label>
           <input type="tel" id="f-phone" placeholder="+421 9XX XXX XXX" autocomplete="tel">
         </div>
+        <div class="fg">
+          <label for="f-email">E-mail <span style="font-weight:400;color:var(--muted)">(voliteľné)</span></label>
+          <input type="email" id="f-email" placeholder="vas@email.sk" autocomplete="email">
+        </div>
+
         <hr class="form-divider">
         <p class="form-step-label">3. Adresa doručenia:</p>
         <div class="fg">
@@ -490,7 +527,6 @@
           <textarea id="f-note" placeholder="Napr. zavolajte pred doručením, iné patro atď."></textarea>
         </div>
 
-        <div class="cod-reassure">📞 Po odoslaní vás kontaktujeme telefonicky pre potvrdenie objednávky. Platíte až kuriérovi pri doručení.</div>
         <button class="btn-submit" id="submit-btn" onclick="submitOrder()">
           Objednať — platím pri doručení →
         </button>
@@ -515,81 +551,92 @@
       <div class="product-photo"><img src="./images/product-bottle.webp" alt="Toplux Nutrition Magnesium Glycinate Complex"></div>
       <div>
         <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);margin-bottom:10px">Toplux Nutrition®</div>
-        <h2 class="h2" style="font-size:clamp(26px,3vw,38px);">Magnesium Glycinate Complex<br>— Prírodná chelátová formula.</h2>
-        <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:28px">Toplux Nutrition Magnesium Glycinate Complex používa chelátovú formu — horčík viazaný na aminokyselinu glycín. Je navrhnutý ako jednoduchý doplnok do dennej rutiny pre každodennú minerálnu podporu.</p>
+        <h2 class="h2" style="font-size:clamp(26px,3vw,38px);">Magnesium Glycinate Complex<br>— nie obyčajný horčík z lekárne.</h2>
+        <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:28px">Väčšina lacných horčíkových produktov sa vstrebáva zle a dráždi žalúdok. Toplux Nutrition Magnesium Glycinate Complex používa chelátovú formu — horčík viazaný na aminokyselinu glycín — pre maximálnu vstrebateľnosť a šetrnosť na tráviacu sústavu.</p>
         <div class="stats-row">
           <div class="stat"><div class="stat-n">525</div><div class="stat-l">mg / dávka</div></div>
           <div class="stat"><div class="stat-n">90</div><div class="stat-l">kapsúl / balenie</div></div>
           <div class="stat"><div class="stat-n">90</div><div class="stat-l">dní zásoby</div></div>
         </div>
-        <a href="#objednat" class="btn-hero" style="font-size:16px;padding:17px 30px;max-width:320px">Objednať pri doručení →</a>
+        <a href="#objednat" class="btn-hero" style="font-size:16px;padding:17px 30px;max-width:320px">Objednajte teraz →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY CHELATED -->
+
+<!-- WHY TOPLUX / COMPARISON -->
 <section class="section" style="background:var(--white)">
   <div class="section-inner">
-    <div style="text-align:center;margin-bottom:52px">
-      <div class="tag">Prečo chelátový horčík?</div>
-      <h2 class="h2">Nie každý horčík je rovnaký</h2>
-      <p class="lead" style="margin:0 auto">Chelátová forma znamená, že horčík je viazaný na aminokyselinu — vaše telo ho vstrebáva oveľa efektívnejšie ako bežné formy.</p>
+    <div style="text-align:center;margin-bottom:46px">
+      <div class="tag">Prečo TOPLUX?</div>
+      <h2 class="h2">Prečo bežný horčík často nestačí?</h2>
+      <p class="lead" style="margin:0 auto">Väčšina ľudí si myslí, že každý horčík je rovnaký. Práve tu vzniká rozdiel medzi obyčajným doplnkom a prémiovým Magnesium Complexom.</p>
     </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🔬</div>
-        <div class="why-title">Maximálna vstrebateľnosť</div>
-        <div class="why-desc">Chelátová väzba chráni horčík počas trávenia a umožňuje jeho efektívnejší transport cez črevnú stenu priamo do buniek.</div>
+
+    <div class="compare-card">
+      <div class="compare-col compare-basic">
+        <div class="compare-head">Bežný horčík z lekárne</div>
+        <ul>
+          <li>Často len jedna základná forma magnézia</li>
+          <li>Produkt pôsobí ako obyčajný doplnok bez jasného rozdielu</li>
+          <li>Málo vysvetlené dávkovanie a forma</li>
+          <li>Kupujete len „nejaký horčík“</li>
+          <li>Slabý dôvod vybrať si práve tú značku</li>
+        </ul>
       </div>
-      <div class="why-card">
-        <div class="why-icon">🫀</div>
-        <div class="why-title">Šetrný na žalúdok</div>
-        <div class="why-desc">Magnesium Glycinate je jemnejší na tráviacu sústavu ako bežné formy ako Oxide alebo Chloride — bez nepríjemných vedľajších účinkov.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">⚗️</div>
-        <div class="why-title">Synergický efekt glycínu</div>
-        <div class="why-desc">Glycín je aminokyselina, ktorá sama o sebe prispieva k normálnej funkcii nervovej sústavy — dvojitý prínos v jednej kapsule.</div>
+      <div class="compare-col compare-toplux">
+        <div class="compare-badge">Odporúčaná voľba</div>
+        <div class="compare-head">TOPLUX Magnesium Complex</div>
+        <ul>
+          <li>Prémiový Magnesium Complex s chelátovou formou</li>
+          <li>525mg Magnesium Glycinate v praktickej dennej rutine</li>
+          <li>90 kapsúl v balení — jasné a jednoduché dávkovanie</li>
+          <li>Vhodné pre mužov aj ženy ako každodenná minerálna podpora</li>
+          <li>Bez platby vopred — platíte až pri doručení</li>
+        </ul>
       </div>
     </div>
+
     <div class="chelate-banner">
       <div class="chelate-badge"><div class="big">525mg</div><div class="sm">na dávku</div></div>
-      <p class="chelate-text"><strong>Natural Chelated Formula</strong> — Toplux Nutrition používa výlučne prírodný chelátový proces bez syntetických prísad. Každá kapsula obsahuje 525mg chelátového horčíka pre konzistentnú dennú podporu.</p>
+      <p class="chelate-text"><strong>TOPLUX je pre ľudí, ktorí nechcú kupovať naslepo.</strong> Jasná formula, prémiový vzhľad, jednoduchá rutina a komfort objednávky bez platby vopred. Toto je dôvod, prečo má produkt pôsobiť inak než obyčajný horčík z police.</p>
     </div>
   </div>
 </section>
+
 
 <!-- BENEFITS -->
 <section class="section benefits-bg">
   <div class="section-inner">
     <div class="benefits-header">
-      <div class="tag tag-w">Výhody produktu</div>
-      <h2 class="h2 h2-w">Čo pre vás robí každá kapsula</h2>
-      <p class="lead lead-w">Päť overených oblastí podpory v jednom jednoduchom doplnku stravy.</p>
+      <div class="tag tag-w">Silná denná rutina</div>
+      <h2 class="h2 h2-w">Pre koho je TOPLUX Magnesium Complex?</h2>
+      <p class="lead lead-w">Tento produkt je pre ľudí, ktorí chcú mať doma kvalitnejší Magnesium Complex — nie len ďalšiu obyčajnú fľašu doplnku.</p>
     </div>
     <div class="benefits-grid">
-      <div class="benefit-card"><div class="b-icon">💪</div><div><div class="b-title">Svaly a kosti</div><div class="b-desc">Horčík prispieva k normálnej funkcii svalov a pomáha udržiavať normálnu štruktúru kostí — pre aktívnych aj tých, čo sedia celý deň pri stole.</div></div></div>
-      <div class="benefit-card"><div class="b-icon">🌙</div><div><div class="b-title">Relaxácia a večerná pohoda</div><div class="b-desc">Horčík podporuje normálnu funkciu nervovej sústavy — ideálny ako súčasť večerného rituálu po dlhom a náročnom dni.</div></div></div>
-      <div class="benefit-card"><div class="b-icon">🫶</div><div><div class="b-title">Kardiovaskulárna podpora</div><div class="b-desc">Horčík prispieva k normálnej funkcii srdca a krvného tlaku — dôležité pri každodennom strese a náročnom životnom tempe.</div></div></div>
-      <div class="benefit-card"><div class="b-icon">⚡</div><div><div class="b-title">Energia a enzýmová aktivita</div><div class="b-desc">Podieľa sa na normálnom energetickom metabolizme a funkcii enzýmov — pre tých, ktorí chcú zostať sústredení a aktívni počas celého dňa.</div></div></div>
+      <div class="benefit-card"><div class="b-icon">🌙</div><div><div class="b-title">Pre večernú rutinu</div><div class="b-desc">Jednoduchý návyk na konci dňa: pohár vody, jedna dávka a jasná rutina bez komplikácií.</div></div></div>
+      <div class="benefit-card"><div class="b-icon">💪</div><div><div class="b-title">Pre mužov aj ženy</div><div class="b-desc">Praktická minerálna podpora pre domácnosť, kde magnézium používa viac než jedna osoba.</div></div></div>
+      <div class="benefit-card"><div class="b-icon">🔬</div><div><div class="b-title">Pre ľudí, ktorí riešia formu</div><div class="b-desc">Chelátová forma magnézia je dôvod, prečo TOPLUX nepôsobí ako bežný základný doplnok z police.</div></div></div>
+      <div class="benefit-card"><div class="b-icon">📦</div><div><div class="b-title">Pre tých, ktorí nechcú riskovať platbu vopred</div><div class="b-desc">Objednáte online, objednávku potvrdíme telefonicky a platíte až pri doručení kuriérovi.</div></div></div>
     </div>
   </div>
 </section>
+
 
 <!-- TESTIMONIALS -->
 <section class="section testi-bg">
   <div class="section-inner">
     <div class="testi-header">
       <div class="tag">Recenzie zákazníkov</div>
-      <h2 class="h2">Čo hovoria naši zákazníci</h2>
+      <h2 class="h2">Prečo si zákazníci vyberajú TOPLUX</h2>
       <div class="stars-row">★★★★★</div>
-      <p style="font-size:14px;color:var(--muted);margin-top:6px">Priemerné hodnotenie 4.8/5 z viac ako 2 000 overených recenzií</p>
+      <p style="font-size:14px;color:var(--muted);margin-top:6px">Skúsenosti zákazníkov, ktorí si TOPLUX zaradili do svojej dennej rutiny</p>
     </div>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="t-stars">★★★★★</div>
-        <p class="t-text">„Pracujem 10 hodín denne v kancelárii. Tento doplnok som si zaradila do večerného rituálu a som veľmi spokojná. Kapsule sa ľahko prehĺtajú, žalúdok mi neprekáža vôbec. Doručenie bolo rýchle a zaplatila som pri prevzatí."</p>
+        <p class="t-text">„Chcela som niečo kvalitnejšie než obyčajný horčík z lekárne. TOPLUX vyzerá prémiovo, má jasné dávkovanie a zaradila som ho do večernej rutiny. Doručenie bolo rýchle a zaplatila som až pri prevzatí.“</p>
         <div class="t-author">
           <img src="./images/testimonial-maria.webp" alt="Mária K." class="t-avatar">
           <div><div class="t-name">Mária K.</div><div class="t-meta">42 rokov · Bratislava · ✅ Overená zákazníčka</div></div>
@@ -597,7 +644,7 @@
       </div>
       <div class="testi-card">
         <div class="t-stars">★★★★★</div>
-        <p class="t-text">„Chelátová forma je skutočný rozdiel oproti lacným produktom, ktoré som skúšal predtým. Objednal som pre seba aj pre manželku — 2 balenia. Platba pri prevzatí bola super, žiadne riziko. Určite objednám znova."</p>
+        <p class="t-text">„Presvedčila ma hlavne chelátová forma a balík 2 kusy. Nechcel som základný lacný doplnok bez vysvetlenia. Objednal som pre seba aj manželku a platba pri doručení bola veľké plus.“</p>
         <div class="t-author">
           <img src="./images/testimonial-peter.webp" alt="Peter M." class="t-avatar">
           <div><div class="t-name">Peter M.</div><div class="t-meta">38 rokov · Košice · ✅ Overený zákazník</div></div>
@@ -605,7 +652,7 @@
       </div>
       <div class="testi-card">
         <div class="t-stars">★★★★☆</div>
-        <p class="t-text">„Skúsila som veľa rôznych horčíkov, ale Toplux Nutrition Glycinate je iný — skutočne šetrný na žalúdok ako sľubujú. Odporúčam každému, kto mal problémy s inými formami horčíka."</p>
+        <p class="t-text">„Páči sa mi, že TOPLUX nepôsobí ako náhodný doplnok z police. Je to jasne vysvetlený Magnesium Complex, pekné balenie a jednoduchá rutina. Vzala som rovno 3 balenia pre domácnosť.“</p>
         <div class="t-author">
           <img src="./images/testimonial-jana.webp" alt="Jana S." class="t-avatar">
           <div><div class="t-name">Jana S.</div><div class="t-meta">51 rokov · Žilina · ✅ Overená zákazníčka</div></div>
@@ -615,20 +662,22 @@
   </div>
 </section>
 
+
 <!-- CUSTOMER PHOTO REVIEWS GRID -->
 <section class="section" style="background:var(--off-white);padding-top:0">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:36px">
       <div class="tag">Fotky od zákazníkov</div>
       <h2 class="h2">Zákazníci nám posielajú fotky</h2>
-      <p class="lead" style="margin:0 auto">Skutočné fotky od skutočných ľudí — priamo od vás.</p>
+      <p class="lead" style="margin:0 auto">Fotky a momenty zákazníkov, ktorí si TOPLUX zaradili do svojej každodennej rutiny.</p>
     </div>
     <div style="border-radius:20px;overflow:hidden;box-shadow:0 16px 52px rgba(0,0,0,.10)">
       <img src="./images/reviews-grid.webp" alt="Fotky zákazníkov s Toplux Nutrition Magnesium Glycinate Complex" style="width:100%;display:block">
     </div>
-    <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:16px">📸 Chcete sa objaviť tu? Pošlite nám svoju fotku po objednávke.</p>
+    <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:16px">📸 TOPLUX ako súčasť každodennej rutiny doma, v práci aj po tréningu.</p>
   </div>
 </section>
+
 
 <!-- PROCESS -->
 <section class="section" style="background:var(--off-white)">
@@ -646,18 +695,20 @@
   </div>
 </section>
 
+
 <!-- GUARANTEE -->
 <section class="section" style="background:var(--white)">
   <div class="section-inner">
     <div class="guarantee-card">
       <div class="guarantee-img"><img src="./images/guarantee.webp" alt="100% záruka spokojnosti Toplux Nutrition"></div>
       <div>
-        <h2 class="g-title">Bezpečná objednávka bez platby vopred</h2>
-        <p class="g-text">Objednávate bez platby vopred a zaplatíte až pri doručení. Ak s objednávkou niečo nebude v poriadku, kontaktujte nás a pomôžeme vám ju vyriešiť jednoducho a férovo.</p>
+        <h2 class="g-title">100% záruka spokojnosti</h2>
+        <p class="g-text">Pocítite rozdiel — alebo vrátime peniaze. Žiadne otázky, žiadne komplikácie. Veríme v náš produkt natoľko, že nesete nulové riziko. Ak nie ste spokojní z akéhokoľvek dôvodu, kontaktujte nás a vyriešime to okamžite.</p>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- FAQ -->
 <section class="section" style="background:var(--off-white)">
@@ -668,7 +719,7 @@
     </div>
     <div class="faq-item open">
       <div class="faq-q" onclick="toggleFaq(this)">Čo je chelátový horčík a prečo je lepší?<div class="faq-chevron">▼</div></div>
-      <div class="faq-a">Chelátový horčík je forma, kde je horčík chemicky viazaný na aminokyselinu (glycín). Táto väzba ho chráni počas trávenia a umožňuje efektívnejšie vstrebávanie cez črevnú stenu — oveľa lepšie ako bežné lacné formy ako Magnesium Oxide.</div>
+      <div class="faq-a">Chelátový horčík je forma, kde je horčík chemicky viazaný na aminokyselinu (glycín). Táto forma sa často používa v prémiových doplnkoch výživy, pretože je obľúbená pre každodenné užívanie a jasné dávkovanie.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Kedy a ako zaplatím?<div class="faq-chevron">▼</div></div>
@@ -684,7 +735,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Čo ak nebudem spokojný/á?<div class="faq-chevron">▼</div></div>
-      <div class="faq-a">Ponúkame 100% záruku spokojnosti. Ak nie ste spokojní z akéhokoľvek dôvodu, kontaktujte náš zákaznícky servis a vrátime vám peniaze bez otázok.</div>
+      <div class="faq-a">Objednávate bez platby vopred a platíte až pri doručení. Ak s objednávkou niečo nebude v poriadku, kontaktujte nás a pomôžeme vám ju vyriešiť jednoducho a férovo.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Koľko kapsúl denne mám brať?<div class="faq-chevron">▼</div></div>
@@ -704,7 +755,7 @@
   <p class="foot-copy">© 2025 Toplux Nutrition. Všetky práva vyhradené.</p>
 </footer>
 
-<div class="sticky-mobile" onclick="location.href='#objednat'">2 balenia 54,90 € • Platba pri doručení →</div>
+<div class="sticky-mobile" onclick="location.href='#objednat'">Objednajte teraz — platíte pri doručení →</div>
 
 <script>
   /* ─── Package definitions (matches Google Sheet columns exactly) ─── */
@@ -714,7 +765,6 @@
     3: { sku:'PMLD-1740', price:69.90, quantity:3 }
   };
   let currentPkg = 2;
-  let checkoutStarted = false;
 
   /* ─── REPLACE THIS WITH YOUR DEPLOYED APPS SCRIPT URL ─── */
   const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxc2SMK4BDOORt0GH3S4O-acVK49o6Njhx0O5Anm3grzXhtUq_9SYUZ6cqbIuxslaI/exec';
@@ -726,7 +776,6 @@
   function selectPkg(n){
     currentPkg = n;
     syncPicker();
-    fireInitiateCheckout();
     document.getElementById('objednat').scrollIntoView({behavior:'smooth'});
   }
 
@@ -734,7 +783,6 @@
   function setPkg(el, n){
     currentPkg = n;
     syncPicker();
-    fireInitiateCheckout();
   }
 
   function syncPicker(){
@@ -747,11 +795,9 @@
      Just paste your pixel base code in the <head> comments.
   ───────────────────────────────────────────────── */
   function fireInitiateCheckout(){
-    if(checkoutStarted) return;
-    checkoutStarted = true;
     const p = PKGS[currentPkg];
     if(typeof fbq!=='undefined') fbq('track','InitiateCheckout',{value:p.price,currency:'EUR',content_ids:[p.sku],num_items:p.quantity});
-    if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{value:p.price,currency:'EUR',content_id:p.sku,quantity:p.quantity});
+    if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{value:p.price,currency:'EUR',content_id:p.sku});
   }
 
   function firePurchase(p){
@@ -816,7 +862,7 @@
       city:             document.getElementById('f-city').value.trim(),
       zip_code:         document.getElementById('f-zip').value.trim(),
       customer_address: document.getElementById('f-street').value.trim(),
-      customer_email:   (document.getElementById('f-email') ? document.getElementById('f-email').value.trim() : ''),
+      customer_email:   document.getElementById('f-email').value.trim(),
       quantity:         pkg.quantity,
       note:             document.getElementById('f-note').value.trim(),
       date:             now.toISOString()
