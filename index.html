@@ -112,7 +112,7 @@
        HERO
     ════════════════════════════════════════════ */
     .hero{background:var(--navy);position:relative;overflow:hidden}
-    .hero-bg{position:absolute;inset:0;background-image:url('images/hero-bg.webp');background-size:cover;background-position:center 30%;opacity:.18;pointer-events:none}
+    .hero-bg{position:absolute;inset:0;background-image:url('./images/hero-bg.webp');background-size:cover;background-position:center 30%;opacity:.18;pointer-events:none}
     .hero-glow{position:absolute;top:-200px;right:-100px;width:600px;height:800px;background:radial-gradient(ellipse,rgba(92,61,158,.22) 0%,transparent 70%);pointer-events:none}
     .hero-wrap{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:56px 24px 52px;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
 
@@ -437,6 +437,43 @@
     .toast-time{font-size:10px;color:var(--muted);margin-top:2px;display:block}
 
     /* ════════════════════════════════════════════
+       PHARMACY IMAGE
+    ════════════════════════════════════════════ */
+    .pharma-visual{margin:32px auto 0;max-width:800px;border-radius:18px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.35)}
+    .pharma-visual img{width:100%;display:block;max-height:320px;object-fit:cover}
+
+    /* ════════════════════════════════════════════
+       CHELATION DIAGRAM
+    ════════════════════════════════════════════ */
+    .chelation-visual{margin:32px 0 28px;border-radius:18px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.08);border:1px solid var(--border)}
+    .chelation-visual img{width:100%;display:block}
+
+    /* ════════════════════════════════════════════
+       BENEFIT LIFESTYLE PHOTOS
+    ════════════════════════════════════════════ */
+    .ben-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:40px}
+    .ben-photo{border-radius:16px;overflow:hidden;position:relative;line-height:0}
+    .ben-photo img{width:100%;height:220px;object-fit:cover;display:block}
+    .ben-photo-label{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,.58);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;padding:5px 14px;border-radius:20px;backdrop-filter:blur(4px)}
+
+    /* ════════════════════════════════════════════
+       COD DELIVERY IMAGE
+    ════════════════════════════════════════════ */
+    .delivery-visual{margin-top:36px;border-radius:18px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.11)}
+    .delivery-visual img{width:100%;display:block;max-height:400px;object-fit:cover;object-position:center top}
+
+    /* ════════════════════════════════════════════
+       BEFORE-AFTER SECTION
+    ════════════════════════════════════════════ */
+    .before-after-section{background:#fff;padding:80px 24px}
+    .ba-inner{max-width:960px;margin:0 auto;text-align:center}
+    .ba-visual{margin-top:40px;border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.13)}
+    .ba-visual img{width:100%;display:block}
+    .ba-caption{display:flex;justify-content:center;gap:48px;margin-top:20px}
+    .ba-cap-item{text-align:center;font-size:13px;font-weight:700;font-family:'Montserrat',sans-serif}
+    .ba-cap-item .label{color:var(--muted);font-weight:400;font-size:12px;margin-top:2px}
+
+    /* ════════════════════════════════════════════
        RESPONSIVE
     ════════════════════════════════════════════ */
     @media(max-width:960px){
@@ -452,7 +489,7 @@
       .qo-pkgs{grid-template-columns:1fr}
       .qo-grid-2,.qo-grid-3{grid-template-columns:1fr}
       .prob-grid{grid-template-columns:1fr}
-      .prob-photo{display:none}
+      .prob-photo img{height:260px;border-radius:16px;width:100%}
       .prod-grid{grid-template-columns:1fr;text-align:center}
       .prod-photo img{margin:0 auto;max-width:260px}
       .why-grid{grid-template-columns:1fr}
@@ -482,7 +519,10 @@
       .form-section{padding:56px 14px}
       .form-sec-inner,.form-box{max-width:100%}
       .fg input,.qo-fg input{font-size:16px}
-      .sticky-mob{font-size:14px}
+      .ben-photos{grid-template-columns:1fr}
+      .ben-photo img{height:240px}
+      .ba-caption{gap:24px}
+      .before-after-section{padding:56px 16px}
     }
   </style>
 </head>
@@ -549,7 +589,7 @@
       <div class="live-bar"><span class="live-dot"></span><span>Dnes objednalo <strong id="today-count">47</strong> ľudí zo Slovenska</span></div>
     </div>
     <div class="hero-visual">
-      <img src="images/product-bottle.webp" alt="Toplux Nutrition Magnesium Glycinate Complex 525mg">
+      <img src="./images/product-bottle.webp" alt="Toplux Nutrition Magnesium Glycinate Complex 525mg">
     </div>
   </div>
 </section>
@@ -597,10 +637,6 @@
             <label for="q-phone">Telefón * <span style="font-weight:400;opacity:.65">(zavoláme pre potvrdenie)</span></label>
             <input type="tel" id="q-phone" placeholder="+421 9XX XXX XXX" autocomplete="tel">
           </div>
-        </div>
-        <div class="qo-fg">
-          <label for="q-email">Email *</label>
-          <input type="email" id="q-email" placeholder="jana@email.sk" autocomplete="email">
         </div>
         <div class="qo-fg">
           <label for="q-street">Ulica a číslo domu *</label>
@@ -654,7 +690,7 @@
 <section class="section" style="background:#fff">
   <div class="sec-inner">
     <div class="prob-grid">
-      <div class="prob-photo"><img src="images/lifestyle-problem.webp" alt="Únava"></div>
+      <div class="prob-photo"><img src="./images/lifestyle-problem.webp" alt="Únava"></div>
       <div>
         <div class="tag">Poznáte to?</div>
         <h2 class="h2">Prečo sa cítite unavení,<br>aj keď ste spali?</h2>
@@ -677,6 +713,9 @@
     <div class="tag tag-w">Porovnanie cien</div>
     <h2 class="h2 h2-w">V lekárni zaplatíte 2–3× viac<br>za horšiu formu horčíka</h2>
     <p class="lead lead-w" style="margin:10px auto 0;text-align:center">Chelátová forma je najlepšia — ale lekárenské ceny sú neprimerané. Pozrite si porovnanie.</p>
+    <div class="pharma-visual">
+      <img src="images/pharmacy-vs-toplux.webp" alt="Porovnanie lekárne a Toplux Nutrition Magnesium Glycinate">
+    </div>
     <div class="pharma-table">
       <div class="pharma-col lose">
         <div class="pharma-lbl">Slovenská lekáreň</div>
@@ -714,7 +753,7 @@
 <section class="section" style="background:var(--off-white)">
   <div class="sec-inner">
     <div class="prod-grid">
-      <div class="prod-photo"><img src="images/product-bottle.webp" alt="Toplux Nutrition Magnesium Glycinate Complex"></div>
+      <div class="prod-photo"><img src="./images/product-bottle.webp" alt="Toplux Nutrition Magnesium Glycinate Complex"></div>
       <div>
         <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);margin-bottom:10px">Toplux Nutrition®</div>
         <h2 class="h2">Magnesium Glycinate Complex<br>— Prírodná chelátová formula.</h2>
@@ -738,6 +777,9 @@
       <h2 class="h2">Nie všetok horčík je rovnaký</h2>
       <p class="lead" style="margin:0 auto;text-align:center">Chelátová forma Glycinate je na vrchole — vaše telo ju vstrebáva najefektívnejšie.</p>
     </div>
+    <div class="chelation-visual">
+      <img src="images/chelation-diagram.webp" alt="Porovnanie vstrebateľnosti: Magnesium Oxide vs Magnesium Glycinate 525mg">
+    </div>
     <div class="why-grid">
       <div class="why-card"><div class="why-icon">🔬</div><div class="why-title">Chelátová väzba</div><div class="why-desc">Horčík chemicky viazaný na aminokyselinu glycín. Ochranná väzba ho dostane do tela oveľa efektívnejšie než lacné oxidy z lekárne.</div></div>
       <div class="why-card"><div class="why-icon">🧬</div><div class="why-title">Maximálna vstrebateľnosť</div><div class="why-desc">Výrazne vyššia biologická dostupnosť. Telo absorbuje oveľa viac z každej kapsuly — nedostatok pociťujete menej rýchlo.</div></div>
@@ -757,6 +799,16 @@
       <div class="tag tag-w">Čo pocítite</div>
       <h2 class="h2 h2-w">6 dôvodov, prečo Slováci milujú<br>Magnesium Glycinate</h2>
       <p class="lead lead-w" style="margin:0 auto">Na základe viac ako 2 000 overených hodnotení zo Slovenska.</p>
+    </div>
+    <div class="ben-photos">
+      <div class="ben-photo">
+        <img src="images/benefit-energy.webp" alt="Viac energie počas dňa po užívaní Magnesium Glycinate">
+        <span class="ben-photo-label">⚡ Viac energie</span>
+      </div>
+      <div class="ben-photo">
+        <img src="images/benefit-sleep.webp" alt="Lepší a hlbší spánok s Toplux Nutrition Magnesium Glycinate">
+        <span class="ben-photo-label">😴 Lepší spánok</span>
+      </div>
     </div>
     <div class="ben-grid">
       <div class="ben-card"><div class="ben-icon">⚡</div><div><div class="ben-title">Viac energie počas dňa</div><div class="ben-desc">Zákazníci hlásia výrazne vyššiu energiu po 2–4 týždňoch. Menej popoludňajšej únavy, viac koncentrácie.</div></div></div>
@@ -784,7 +836,7 @@
         <div class="t-stars">★★★★★</div>
         <p class="t-text">„Pracujem 10 hodín denne v kancelárii. Tento doplnok som si zaradila do večerného rituálu a som veľmi spokojná. Kapsule sa ľahko prehĺtajú, žalúdok mi neprekáža vôbec. Doručenie bolo rýchle — platila som pri prevzatí."</p>
         <div class="t-author">
-          <img src="images/testimonial-maria.webp" alt="Mária K." class="t-avatar">
+          <img src="./images/testimonial-maria.webp" alt="Mária K." class="t-avatar">
           <div><div class="t-name">Mária K., 42 rokov</div><div class="t-city">📍 Bratislava, Petržalka</div><div class="t-meta">✅ Overená · 2 balenia</div></div>
         </div>
       </div>
@@ -793,7 +845,7 @@
         <div class="t-stars">★★★★★</div>
         <p class="t-text">„Chelátová forma je skutočný rozdiel oproti lacným produktom. Objednal som pre seba aj manželku — 2 balenia. Platba pri prevzatí bola super, žiadne riziko. Po dvoch mesiacoch cítim výrazný rozdiel v energii a spánku."</p>
         <div class="t-author">
-          <img src="images/testimonial-peter.webp" alt="Peter M." class="t-avatar">
+          <img src="./images/testimonial-peter.webp" alt="Peter M." class="t-avatar">
           <div><div class="t-name">Peter M., 38 rokov</div><div class="t-city">📍 Košice, Západ</div><div class="t-meta">✅ Overený · opakovaná objednávka</div></div>
         </div>
       </div>
@@ -802,7 +854,7 @@
         <div class="t-stars">★★★★★</div>
         <p class="t-text">„Skúsila som veľa rôznych horčíkov, ale Toplux Glycinate je iný — skutočne šetrný na žalúdok. Spánok sa mi výrazne zlepšil. Odporúčam každému, kto mal problémy s inými formami horčíka."</p>
         <div class="t-author">
-          <img src="images/testimonial-jana.webp" alt="Jana S." class="t-avatar">
+          <img src="./images/testimonial-jana.webp" alt="Jana S." class="t-avatar">
           <div><div class="t-name">Jana S., 51 rokov</div><div class="t-city">📍 Žilina, centrum</div><div class="t-meta">✅ Overená · 3 balenia</div></div>
         </div>
       </div>
@@ -819,7 +871,7 @@
   <div class="sec-inner">
     <div style="text-align:center;margin-bottom:32px"><div class="tag">Fotky od zákazníkov</div><h2 class="h2">Zákazníci nám posielajú fotky</h2></div>
     <div style="border-radius:18px;overflow:hidden;box-shadow:0 14px 48px rgba(0,0,0,.09)">
-      <img src="images/reviews-grid.webp" alt="Fotky zákazníkov" style="width:100%;display:block">
+      <img src="./images/reviews-grid.webp" alt="Fotky zákazníkov" style="width:100%;display:block">
     </div>
     <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:14px">📸 Chcete sa objaviť tu? Pošlite nám svoju fotku po objednávke.</p>
   </div>
@@ -835,7 +887,7 @@
     </div>
     <div class="pkgs-grid">
       <div class="pkg" onclick="selectPkg(1)">
-        <div class="pkg-img"><img src="images/product-offer-1.webp" alt="1 balenie"></div>
+        <div class="pkg-img"><img src="./images/product-offer-1.webp" alt="1 balenie"></div>
         <div class="pkg-name">Skúšobný balík</div>
         <div class="pkg-supply">1 balenie · 90 kapsúl · 3 mesiace</div>
         <div class="pkg-old">Bežná cena: €42.00</div>
@@ -853,7 +905,7 @@
       </div>
       <div class="pkg feat" onclick="selectPkg(2)">
         <div class="pkg-badge">★ Najrozumnejšia voľba</div>
-        <div class="pkg-img"><img src="images/product-offer-2.webp" alt="2 balenia"></div>
+        <div class="pkg-img"><img src="./images/product-offer-2.webp" alt="2 balenia"></div>
         <div class="pkg-name">Odporúčaný balík</div>
         <div class="pkg-supply">2 balenia · 180 kapsúl · 6 mesiacov</div>
         <div class="pkg-old">Bežná cena: €84.00 · Ušetríte €29.10</div>
@@ -872,7 +924,7 @@
       </div>
       <div class="pkg" onclick="selectPkg(3)">
         <div class="pkg-badge">Najvyššia úspora</div>
-        <div class="pkg-img"><img src="images/product-offer-3.webp" alt="3 balenia"></div>
+        <div class="pkg-img"><img src="./images/product-offer-3.webp" alt="3 balenia"></div>
         <div class="pkg-name">Rodinný balík</div>
         <div class="pkg-supply">3 balenia · 270 kapsúl · 9 mesiacov</div>
         <div class="pkg-old">Bežná cena: €126.00 · Ušetríte €56.10</div>
@@ -909,6 +961,9 @@
     <div class="phone-note">
       <p>📞 <strong>Nebojte sa neznámeho čísla!</strong> Budeme vám volať zo slovenského čísla. Odporúčame si ho uložiť dopredu ako „Toplux Nutrition". Ak hovor nestihnete — zavoláme ešte raz. Môžete nám napísať aj SMS alebo Viber.</p>
     </div>
+    <div class="delivery-visual">
+      <img src="images/cod-delivery.webp" alt="GLS kuriér doručuje balík a zákazníčka platí pri prevzatí v hotovosti — Cash on Delivery Slovensko">
+    </div>
   </div>
 </section>
 
@@ -916,7 +971,7 @@
 <section class="section" style="background:#fff">
   <div class="sec-inner">
     <div class="guarantee-card">
-      <div class="g-img"><img src="images/guarantee.webp" alt="100% záruka spokojnosti"></div>
+      <div class="g-img"><img src="./images/guarantee.webp" alt="100% záruka spokojnosti"></div>
       <div>
         <h2 class="g-title">100% záruka<br>spokojnosti na 30 dní</h2>
         <p class="g-text">Pocítite rozdiel — alebo vrátime celú sumu. Žiadne otázky, žiadne komplikácie. Ak nie ste spokojní z akéhokoľvek dôvodu do 30 dní, kontaktujte nás a vyriešime to okamžite.</p>
@@ -941,6 +996,25 @@
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Čo ak nebudem spokojný/á?<div class="faq-chev">▼</div></div><div class="faq-a">Ponúkame 100% záruku spokojnosti na 30 dní. Ak nie ste spokojní z akéhokoľvek dôvodu, kontaktujte nás a vrátime vám peniaze bez otázok.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Koľko kapsúl denne?<div class="faq-chev">▼</div></div><div class="faq-a">Odporúčame 1 kapsulu denne s jedlom. Jedno balenie (90 kapsúl) vydrží 90 dní. Pre najlepšiu skúsenosť odporúčame minimálne 90 dní pravidelného užívania.</div></div>
     <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)">Je to liek?<div class="faq-chev">▼</div></div><div class="faq-a">Nie. Toplux Nutrition Magnesium Glycinate Complex je doplnok stravy, nie liek. Nie je určený na diagnostiku, liečbu ani prevenciu akejkoľvek choroby.</div></div>
+  </div>
+</section>
+
+<!-- ══ BEFORE — AFTER ══════════════════════════════════════════ -->
+<section class="before-after-section">
+  <div class="ba-inner">
+    <div class="tag" style="text-align:center">Výsledky po 30 dňoch</div>
+    <h2 class="h2" style="text-align:center">Pocítite rozdiel.<br>Garantujeme to.</h2>
+    <p class="lead" style="margin:0 auto;text-align:center">Zákazníci hlásia prvé výsledky už po 2–4 týždňoch pravidelného užívania — viac energie, lepší spánok, uvoľnené svaly.</p>
+    <div class="ba-visual">
+      <img src="images/before-after-lifestyle.webp" alt="Pred a po užívaní Toplux Nutrition Magnesium Glycinate Complex — porovnanie energie a vitality">
+    </div>
+    <div class="ba-caption">
+      <div class="ba-cap-item"><span style="color:var(--muted)">😔</span> Pred<div class="label">Únava, napätie, zlý spánok</div></div>
+      <div class="ba-cap-item"><span style="color:var(--teal)">✨</span> Po 30 dňoch<div class="label">Energia, pohoda, hlboký spánok</div></div>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="#quick-order" class="btn-pulse" style="font-size:15px;padding:16px 34px;max-width:320px;display:inline-flex" onclick="fireInitiateCheckout()">Chcem to vyskúšať →</a>
+    </div>
   </div>
 </section>
 
@@ -1107,7 +1181,6 @@
     const fields = [
       {id: prefix+'-name',   label:'Meno a priezvisko'},
       {id: prefix+'-phone',  label:'Telefónne číslo'},
-      ...(isQuick ? [{id:'q-email', label:'Email'}] : []),
       {id: prefix+'-street', label:'Ulica a číslo domu'},
       {id: prefix+'-city',   label:'Mesto'},
       {id: prefix+'-zip',    label:'PSČ'},
@@ -1138,7 +1211,7 @@
       city:             document.getElementById(prefix+'-city').value.trim(),
       zip_code:         document.getElementById(prefix+'-zip').value.trim(),
       customer_address: document.getElementById(prefix+'-street').value.trim(),
-      customer_email:   isQuick ? document.getElementById('q-email').value.trim() : (document.getElementById('f-email')||{value:''}).value,
+      customer_email:   isQuick ? '' : (document.getElementById('f-email')||{value:''}).value,
       quantity:         pkg.quantity,
       note:             isQuick ? '' : (document.getElementById('f-note')||{value:''}).value,
       date:             now.toISOString()
@@ -1241,34 +1314,5 @@
     });
   });
 </script>
-
-<script>
-(function(){
-  function tryNextImage(img){
-    if(img.dataset.fallbackDone === '1') return;
-    const original = img.getAttribute('src') || '';
-    const file = original.split('/').pop();
-    const candidates = [
-      'images/' + file,
-      './images/' + file,
-      '/' + file,
-      file
-    ];
-    let i = 0;
-    function next(){
-      if(i >= candidates.length){ img.dataset.fallbackDone = '1'; return; }
-      const candidate = candidates[i++];
-      if(candidate === img.src || candidate === original) return next();
-      img.onerror = next;
-      img.src = candidate;
-    }
-    next();
-  }
-  document.querySelectorAll('img').forEach(function(img){
-    img.addEventListener('error', function(){ tryNextImage(img); }, {once:true});
-  });
-})();
-</script>
-
 </body>
 </html>
